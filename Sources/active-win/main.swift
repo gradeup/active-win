@@ -26,6 +26,8 @@ if !hasScreenRecordingPermission() {
 	exit(1)
 }
 
+var result = [[String: Any]]()
+
 for window in windows {
 	let windowOwnerPID = window[kCGWindowOwnerPID as String] as! Int
 
@@ -78,10 +80,11 @@ for window in windows {
 	{
 		dict["url"] = url
 	}
+	result.append(dict)
 
-	print(try! toJson(dict))
-	exit(0)
 }
+print(try! toJson(dict))
+exit(0)
 
 print("null")
 exit(0)

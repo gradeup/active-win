@@ -1,14 +1,12 @@
 {
-	"name": "active-win",
-	"version": "6.1.0",
-	"description": "Get metadata about the active window (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
+	"name": "all-windows",
+	"version": "0.0.1",
+	"description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
 	"license": "MIT",
-	"repository": "sindresorhus/active-win",
-	"funding": "https://github.com/sponsors/sindresorhus",
+	"repository": "gradeup/all-windows",
 	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
+		"name": "Codehimanshu",
+		"email": "himanshuagrawal1998@gmail.com"
 	},
 	"engines": {
 		"node": ">=8"
