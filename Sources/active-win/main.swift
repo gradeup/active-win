@@ -83,7 +83,7 @@ for window in windows {
 	result.append(dict)
 
 }
-print(try! toJson(dict))
+print(try! toJson(result))
 exit(0)
 
 print("null")
