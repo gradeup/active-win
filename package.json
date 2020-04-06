@@ -1,65 +1,78 @@
 {
-	"name": "all-windows",
-	"version": "0.0.1",
-	"description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
-	"license": "MIT",
-	"repository": "gradeup/all-windows",
-	"author": {
-		"name": "Codehimanshu",
-		"email": "himanshuagrawal1998@gmail.com"
-	},
-	"engines": {
-		"node": ">=8"
-	},
-	"scripts": {
-		"test": "xo && ava && tsd",
-		"build": "swift build --configuration=release && mv .build/release/active-win main",
-		"prepublishOnly": "npm run build"
-	},
-	"files": [
-		"index.js",
-		"index.d.ts",
-		"lib",
-		"main"
-	],
-	"keywords": [
-		"macos",
-		"linux",
-		"windows",
-		"app",
-		"application",
-		"window",
-		"win",
-		"active",
-		"focused",
-		"current",
-		"title",
-		"name",
-		"id",
-		"pid",
-		"screenshot",
-		"capture",
-		"metadata",
-		"bounds",
-		"memory",
-		"usage",
-		"bundleid",
-		"browser",
-		"url",
-		"chrome",
-		"safari",
-		"edge",
-		"brave"
-	],
-	"devDependencies": {
-		"ava": "^2.4.0",
-		"tsd": "^0.10.0",
-		"xo": "^0.25.3"
-	},
-	"optionalDependencies": {
-		"ffi-napi": "^2.4.5",
-		"ref-napi": "^1.4.2",
-		"ref-wchar-napi": "^1.0.2",
-		"ref-struct-napi": "^1.1.0"
-	}
+  "name": "all-windows",
+  "version": "1.0.0",
+  "description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gradeup/all-windows.git"
+  },
+  "author": "Codehimanshu <himanshuagrawal1998@gmail.com>",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "xo && ava && tsd",
+    "build": "swift build --configuration=release && mv .build/release/active-win main"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib",
+    "main"
+  ],
+  "keywords": [
+    "macos",
+    "linux",
+    "windows",
+    "app",
+    "application",
+    "window",
+    "win",
+    "active",
+    "focused",
+    "current",
+    "title",
+    "name",
+    "id",
+    "pid",
+    "screenshot",
+    "capture",
+    "metadata",
+    "bounds",
+    "memory",
+    "usage",
+    "bundleid",
+    "browser",
+    "url",
+    "chrome",
+    "safari",
+    "edge",
+    "brave"
+  ],
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "tsd": "^0.10.0",
+    "xo": "^0.25.3"
+  },
+  "optionalDependencies": {
+    "ffi-napi": "^2.4.5",
+    "ref-napi": "^1.4.2",
+    "ref-wchar-napi": "^1.0.2",
+    "ref-struct-napi": "^1.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/gradeup/all-windows/issues"
+  },
+  "homepage": "https://github.com/gradeup/all-windows#readme",
+  "dependencies": {
+    "ffi-napi": "^2.4.5",
+    "ref-napi": "^1.4.2",
+    "ref-wchar-napi": "^1.0.2",
+    "ref-struct-napi": "^1.1.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  }
 }
