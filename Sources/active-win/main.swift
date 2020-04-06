@@ -31,14 +31,14 @@ var result = [[String: Any]]()
 for window in windows {
 	let windowOwnerPID = window[kCGWindowOwnerPID as String] as! Int
 
-	if windowOwnerPID != frontmostAppPID {
-		continue
-	}
+	// if windowOwnerPID != frontmostAppPID {
+	// 	continue
+	// }
 
 	// Skip transparent windows, like with Chrome.
-	if (window[kCGWindowAlpha as String] as! Double) == 0 {
-		continue
-	}
+	// if (window[kCGWindowAlpha as String] as! Double) == 0 {
+	// 	continue
+	// }
 
 	let bounds = CGRect(dictionaryRepresentation: window[kCGWindowBounds as String] as! CFDictionary)!
 
