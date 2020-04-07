@@ -20,24 +20,26 @@ const allWindows = require('all-windows');
 (async () => {
 	console.log(await allWindows());
 	/*
-	{
-		title: 'Unicorns - Google Search',
-		id: 5762,
-		bounds: {
-			x: 0,
-			y: 0,
-			height: 900,
-			width: 1440
-		},
-		owner: {
-			name: 'Google Chrome',
-			processId: 310,
-			bundleId: 'com.google.Chrome',
-			path: '/Applications/Google Chrome.app'
-		},
-		url: 'https://www.google.com/search?q=unicorn',
-		memoryUsage: 11015432
-	}
+	[
+		{
+			title: 'Unicorns - Google Search',
+			id: 5762,
+			bounds: {
+				x: 0,
+				y: 0,
+				height: 900,
+				width: 1440
+			},
+			owner: {
+				name: 'Google Chrome',
+				processId: 310,
+				bundleId: 'com.google.Chrome',
+				path: '/Applications/Google Chrome.app'
+			},
+			url: 'https://www.google.com/search?q=unicorn',
+			memoryUsage: 11015432
+		}
+	]
 	*/
 })();
 ```
@@ -54,7 +56,7 @@ Returns a `Promise<Object>` with the result, or `Promise<undefined>` if there ar
 Returns an `Object` with the result, or `undefined` if there are no windows.
 
 ## Result
-
+An array of the following object structure:
 - `platform` *(string)* - `'macos'`
 - `title` *(string)* - Window title
 - `id` *(number)* - Window identifier
