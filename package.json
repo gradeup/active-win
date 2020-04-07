@@ -1,6 +1,6 @@
 {
   "name": "all-windows",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
   "license": "MIT",
   "repository": {
