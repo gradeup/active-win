@@ -5,15 +5,7 @@ module.exports = () => {
 		return require('./lib/macos')();
 	}
 
-	if (process.platform === 'linux') {
-		return require('./lib/linux')();
-	}
-
-	if (process.platform === 'win32') {
-		return require('./lib/windows')();
-	}
-
-	return Promise.reject(new Error('macOS, Linux, and Windows only'));
+	return Promise.reject(new Error('macOS only'));
 };
 
 module.exports.sync = () => {
@@ -21,13 +13,5 @@ module.exports.sync = () => {
 		return require('./lib/macos').sync();
 	}
 
-	if (process.platform === 'linux') {
-		return require('./lib/linux').sync();
-	}
-
-	if (process.platform === 'win32') {
-		return require('./lib/windows').sync();
-	}
-
-	throw new Error('macOS, Linux, and Windows only');
+	throw new Error('macOS only');
 };

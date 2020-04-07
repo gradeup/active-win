@@ -1,24 +1,24 @@
-# active-win [![Build Status](https://travis-ci.org/sindresorhus/active-win.svg?branch=master)](https://travis-ci.org/sindresorhus/active-win)
+# all-windows
 
-Get metadata about the [active window](https://en.wikipedia.org/wiki/Active_window) (title, id, bounds, owner, URL, etc)
+Get metadata about all windows (title, id, bounds, owner, URL, etc)
 
-Works on macOS, Linux, Windows.
+Works on macOS.
 
 Users on macOS 10.13 or earlier needs to download the [Swift runtime support libraries](https://support.apple.com/kb/DL1998).
 
 ## Install
 
 ```
-$ npm install active-win
+$ npm install all-windows
 ```
 
 ## Usage
 
 ```js
-const activeWin = require('active-win');
+const allWindows = require('all-windows');
 
 (async () => {
-	console.log(await activeWin());
+	console.log(await allWindows());
 	/*
 	{
 		title: 'Unicorns - Google Search',
@@ -35,7 +35,7 @@ const activeWin = require('active-win');
 			bundleId: 'com.google.Chrome',
 			path: '/Applications/Google Chrome.app'
 		},
-		url: 'https://sindresorhus.com/unicorn',
+		url: 'https://www.google.com/search?q=unicorn',
 		memoryUsage: 11015432
 	}
 	*/
@@ -45,17 +45,17 @@ const activeWin = require('active-win');
 
 ## API
 
-### activeWin()
+### allWindows()
 
-Returns a `Promise<Object>` with the result, or `Promise<undefined>` if there is no active window or if the information is not available.
+Returns a `Promise<Object>` with the result, or `Promise<undefined>` if there are no windows or if the information is not available.
 
-### activeWin.sync()
+### allWindows.sync()
 
-Returns an `Object` with the result, or `undefined` if there is no active window.
+Returns an `Object` with the result, or `undefined` if there are no windows.
 
 ## Result
 
-- `platform` *(string)* - `'macos'` | `'linux'` | `'windows'`
+- `platform` *(string)* - `'macos'`
 - `title` *(string)* - Window title
 - `id` *(number)* - Window identifier
 - `bounds` *(Object)* - Window position and size
@@ -68,21 +68,9 @@ Returns an `Object` with the result, or `undefined` if there is no active window
 	- `processId` *(number)* - Process identifier
 	- `bundleId` *(string)* - Bundle identifier *(macOS only)*
 	- `path` *(string)* - Path to the app
-- `url` *(string?)* - URL of the active browser tab if the active window is Safari, Chrome, Edge, or Brave *(macOS only)*
+- `url` *(string?)* - URL of the active browser tab if the window is Safari, Chrome, Edge, or Brave *(macOS only)*
 - `memoryUsage` *(number)* - Memory usage by the window owner process
 
 ## OS support
 
-It works on macOS, Linux, and Windows 7+.
-
-**Note**: On Windows, there isn't a clear notion of a "Window ID". Instead it returns the memory address of the window "handle" in the `id` property. That "handle" is unique per window, so it can be used to identify them. [Read more…](https://msdn.microsoft.com/en-us/library/windows/desktop/ms632597(v=vs.85).aspx#window_handle).
-
-## Related
-
-- [active-win-cli](https://github.com/sindresorhus/active-win-cli) - CLI for this module
-- [active-win-log](https://github.com/uglow/active-win-log) - Window-usage logging CLI using this module
-
-## Maintainers
-
-- [Sindre Sorhus](https://github.com/sindresorhus)
-- [Sebastián Ramírez](https://github.com/tiangolo)
+It works on macOS.
