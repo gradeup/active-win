@@ -9,7 +9,7 @@ const result = activeWin.sync();
 expectType<Result | undefined>(result);
 
 if (result) {
-	expectType<'macos'>(result.platform);
+	expectType<'macos' | 'linux' | 'windows'>(result.platform);
 	expectType<string>(result.title);
 	expectType<number>(result.id);
 	expectType<number>(result.bounds.x);

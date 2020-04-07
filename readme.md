@@ -74,3 +74,7 @@ Returns an `Object` with the result, or `undefined` if there are no windows.
 ## OS support
 
 It works on macOS.
+
+___
+
+### Thanks [sindresorhus](https://github.com/sindresorhus/active-win) for the base implementation
