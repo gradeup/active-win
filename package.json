@@ -1,13 +1,16 @@
 {
   "name": "all-windows",
-  "version": "1.0.3",
-  "description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS, Linux, Windows.",
+  "version": "2.0.0",
+  "description": "Get metadata about all windows (title, id, bounds, owner, URL, etc). Works on macOS.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gradeup/all-windows.git"
   },
-  "author": "Codehimanshu <himanshuagrawal1998@gmail.com>",
+  "author": [
+    "Codehimanshu <himanshuagrawal1998@gmail.com>",
+    "sindresorhus"
+  ],
   "engines": {
     "node": ">=8"
   },
@@ -23,8 +26,6 @@
   ],
   "keywords": [
     "macos",
-    "linux",
-    "windows",
     "app",
     "application",
     "window",
